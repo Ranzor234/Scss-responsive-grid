@@ -1,0 +1,285 @@
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+$White: hsl(0, 0%, 100%);
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+* {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+@mixin gridSystem($col, $row) {
+  grid-column-start: $col;
+  grid-row-start: $row;
+}
+body {
+  background-color: $Light-grayish-blue;
+}
+.wrapper {
+  display: grid;
+
+  grid-template-columns: auto 400px auto;
+  grid-template-rows: 50px 475px 275px 275px 425px 495px 10%;
+  row-gap: 20px;
+}
+
+.grid-daniel {
+  @include gridSystem(2, 2);
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 25px 100px auto 25px;
+  width: 400px;
+  height: 475px;
+  background-color: $Moderate-violet;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 250px 1px;
+  border-radius: 10px;
+  .profile {
+    @include gridSystem(2, 2);
+    display: flex;
+    img {
+      border-radius: 50%;
+      margin-top: 12px;
+      margin-right: 20px;
+    }
+    .name {
+      :nth-child(1) {
+        color: $White;
+      }
+      :nth-child(2) {
+        color: $White;
+        opacity: 50%;
+      }
+    }
+  }
+  .testimonial {
+    @include gridSystem(2, 3);
+    :nth-child(1) {
+      color: $White;
+      font-weight: 600;
+    }
+    :nth-child(2) {
+      font-weight: 500;
+      color: $White;
+      opacity: 70%;
+    }
+  }
+}
+
+.grid-jonathan {
+  @include gridSystem(2, 3);
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 10px 100px auto 10px;
+  width: 400px;
+  height: 275px;
+  background-color: $Very-dark-grayish-blue;
+  border-radius: 10px;
+  .profile {
+    @include gridSystem(2, 2);
+    display: flex;
+    img {
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .name {
+      :nth-child(1) {
+        color: $White;
+      }
+      :nth-child(2) {
+        color: $White;
+        opacity: 50%;
+      }
+    }
+  }
+  .testimonial {
+    @include gridSystem(2, 3);
+    :nth-child(1) {
+      color: $White;
+      font-weight: 600;
+    }
+    :nth-child(2) {
+      font-weight: 500;
+      color: $White;
+      opacity: 70%;
+    }
+  }
+}
+
+.grid-harmon {
+  @include gridSystem(2, 4);
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 10px 100px auto 10px;
+  width: 400px;
+  height: 275px;
+  background-color: $White;
+  border-radius: 10px;
+  .profile {
+    @include gridSystem(2, 2);
+    display: flex;
+    img {
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .name {
+      :nth-child(1) {
+        color: $Very-dark-blackish-blue;
+      }
+      :nth-child(2) {
+        color: $Very-dark-blackish-blue;
+        opacity: 50%;
+      }
+    }
+  }
+  .testimonial {
+    @include gridSystem(2, 3);
+    :nth-child(1) {
+      font-weight: 600;
+    }
+    :nth-child(2) {
+      font-weight: 500;
+      color: $Very-dark-blackish-blue;
+      opacity: 70%;
+    }
+  }
+}
+.grid-abrams {
+  @include gridSystem(2, 5);
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 25px 100px auto 25px;
+  width: 400px;
+  height: 425px;
+  background-color: $Very-dark-blackish-blue;
+  border-radius: 10px;
+  .profile {
+    @include gridSystem(2, 2);
+    display: flex;
+    img {
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .name {
+      :nth-child(1) {
+        color: $White;
+      }
+      :nth-child(2) {
+        color: $White;
+        opacity: 50%;
+      }
+    }
+  }
+  .testimonial {
+    @include gridSystem(2, 3);
+
+    :nth-child(1) {
+      color: $White;
+      font-weight: 600;
+    }
+    :nth-child(2) {
+      font-weight: 500;
+      color: $White;
+      opacity: 70%;
+    }
+  }
+}
+.grid-kira {
+  @include gridSystem(2, 6);
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 25px 100px auto 25px;
+  width: 400px;
+  height: 495px;
+  background-color: $White;
+  border-radius: 10px;
+  box-shadow: 1px 10px 10px $Light-gray;
+  .profile {
+    @include gridSystem(2, 2);
+    display: flex;
+    img {
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .name {
+      :nth-child(1) {
+        color: $Very-dark-blackish-blue;
+      }
+      :nth-child(2) {
+        color: $Very-dark-blackish-blue;
+        opacity: 50%;
+      }
+    }
+  }
+  .testimonial {
+    @include gridSystem(2, 3);
+    :nth-child(1) {
+      font-weight: 600;
+    }
+    :nth-child(2) {
+      font-weight: 500;
+      color: $Very-dark-blackish-blue;
+      opacity: 70%;
+    }
+  }
+}
+
+.wrapper {
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto 275px 275px 275px 275px auto;
+    grid-template-rows: auto 325px 325px auto;
+
+    .grid-daniel {
+      @include gridSystem(2, 2);
+      width: 570px;
+      height: 325px;
+      background-position: 400px 10px;
+    }
+
+    .grid-jonathan {
+      @include gridSystem(4, 2);
+      width: 275px;
+      height: 325px;
+      .profile {
+        margin-top: 17px;
+      }
+      .testimonial {
+        margin-top: 17px;
+      }
+    }
+    .grid-harmon {
+      @include gridSystem(2, 3);
+      width: 275px;
+      height: 325px;
+      .profile {
+        margin-top: 17px;
+      }
+      .testimonial {
+        margin-top: 17px;
+      }
+    }
+
+    .grid-abrams {
+      @include gridSystem(3, 3);
+      width: 570px;
+      height: 325px;
+    }
+    .grid-kira {
+      @include gridSystem(5, 2);
+      height: 670px;
+      width: 275px;
+      box-shadow: none;
+    }
+  }
+}
